@@ -24,19 +24,6 @@ import React from 'react';
 //   },
 // ];
 
-const IndexPage = () => (
-  <>
-    yo
-    {/* <SEO title='Home' /> */}
-    {/* <Intro />
-    <About />
-    <Skill />
-    <Services />
-    <Work skillsData={skillsData} />
-    <Transition />
-    <Projects />
-    <Startup /> */}
-  </>
-);
+const IndexPage = () => <></>;
 
 export default IndexPage;
