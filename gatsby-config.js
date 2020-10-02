@@ -14,13 +14,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `WPGraphql`,
+        fieldName: `wpgraphql`,
+        url: wordpressUrl,
+      },
+    },
   ],
-}; // This file is empty, but some people were reporting that it would not start unless they had an empty file. So here it is! You can delete the comment. Or replace it with your favourite shania twain lyrics.
-
+};
 // {
 //   resolve: `gatsby-plugin-google-analytics`,
 //   options: {
@@ -32,14 +35,7 @@ module.exports = {
 // },
 // `gatsby-plugin-emotion`,
 // `gatsby-plugin-jss`,
-// {
-//   resolve: `gatsby-source-graphql`,
-//   options: {
-//     typeName: `WPGraphql`,
-//     fieldName: `wpgraphql`,
-//     url: wordpressUrl,
-//   },
-// },
+
 // {
 //   resolve: 'gatsby-plugin-react-svg',
 //   options: {
